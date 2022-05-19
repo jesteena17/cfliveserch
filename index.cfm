@@ -14,10 +14,10 @@
 </head>
 
 <body>
+<p>Search for a name from the list</p>
 		<form name="frmSearch" id="frmSearch" method="post">
 		<input type="text" id="searchPersonText" name="searchPersonText" value="" />
 
-		<input type="submit" name="btnSubmit" id="btnSubmit" value="Submit" />
 	</form>
       <div class="disp"></div>
 	<script type="text/javascript">
