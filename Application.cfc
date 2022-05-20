@@ -6,5 +6,10 @@
      <cfset this.clientManagement = true>
      <cfset this.setClientCookies = true /> 
      <cfset this.datasource="testdbdsn" />
+     <cfset this.restsettings.cfclocation = "./" />
+     <cffunction name="onApplicationStart" returntype="boolean">
+      <cfset restInitApplication(GetDirectoryFromPath(getCurrentTemplatePath())&'cfcdir','restexample')/>
+      <cfreturn true>
+     </cffunction>
     
 </cfcomponent>

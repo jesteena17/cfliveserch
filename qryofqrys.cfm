@@ -18,6 +18,10 @@ SELECT id, FirstName, LastName FROM master WHERE LastName=<cfqueryparam value="#
 
 #master.columnlist#<br>
 
+
+<cfloop query="#master#">
+#email&'-'&FirstName&'-'&id&'-'&LastName&'-'&PERSONID#<br>
+</cfloop>
 </cfoutput>
 
 <p>Columns in the detail query:</p>
@@ -25,5 +29,7 @@ SELECT id, FirstName, LastName FROM master WHERE LastName=<cfqueryparam value="#
 <cfoutput>
 
 #detail.columnlist#<br>
-
+<cfloop query="#master#">
+#FirstName&'-'&id&'-'&LastName#<br>
+</cfloop>
 </cfoutput>
